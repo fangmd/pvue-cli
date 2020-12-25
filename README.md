@@ -7,6 +7,18 @@
 1. Vue H5
 
 
+## Install
+
+```
+npm i -g pvue
+```
+
+## Usage
+
+```
+pvue init
+```
+
 
 # 其他
 
