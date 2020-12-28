@@ -7,6 +7,7 @@ import fs from 'fs'
 import logSymbols from 'log-symbols'
 import ora from 'ora'
 import { initH5 } from './init-h5.js'
+import { initNuxtJSPC } from './init-nuxtjs-pc.js'
 
 const program = commander.program
 
@@ -29,7 +30,7 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['Vue H5', 'Vue PC'],
+    choices: ['Vue H5', 'NuxtJS PC'],
   },
 ]
 
@@ -53,8 +54,9 @@ program
       }
 
       if (answers.type === 'Vue H5') {
-        // 下载项目
         initH5({ projectName })
+      } else if (answers.type === 'NuxtJS PC') {
+        initNuxtJSPC({ projectName })
       }
     })
   })

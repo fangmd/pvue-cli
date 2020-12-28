@@ -5,6 +5,7 @@
 用于快速创建 Vue 项目
 
 1. Vue H5
+2. Vue NuxtJS PC
 
 
 ## Install
