@@ -8,6 +8,7 @@ import logSymbols from 'log-symbols'
 import ora from 'ora'
 import { initH5 } from './init-h5.js'
 import { initNuxtJSPC } from './init-nuxtjs-pc.js'
+import { initKoa } from './init-koa.js'
 
 const program = commander.program
 
@@ -30,7 +31,7 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['Vue H5', 'NuxtJS PC'],
+    choices: ['Vue H5', 'NuxtJS PC', 'Koa'],
   },
 ]
 
@@ -57,6 +58,8 @@ program
         initH5({ projectName })
       } else if (answers.type === 'NuxtJS PC') {
         initNuxtJSPC({ projectName })
+      } else if (answers.type === 'Koa') {
+        initKoa({ projectName })
       }
     })
   })

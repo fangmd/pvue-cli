@@ -6,12 +6,19 @@
 
 1. Vue H5
 2. Vue NuxtJS PC
+3. koa
 
 
 ## Install
 
 ```
-npm i -g pvue
+npm i -g pvue-cli
+```
+
+uninstall:
+
+```
+npm unintall -g pvue-cli
 ```
 
 ## Usage
