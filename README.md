@@ -7,7 +7,7 @@
 1. [Vue H5](https://github.com/fangmd/pvue)
 2. [Vue NuxtJS PC](https://github.com/fangmd/pnuxt-pc)
 3. [koa](https://github.com/fangmd/pkoa)
-4. [vue-element-admin](git@github.com:fangmd/vue-element-admin.git)
+4. [vue-element-admin](https://github.com/fangmd/vue-element-admin)
 
 
 ## Install
