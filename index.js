@@ -9,6 +9,7 @@ import ora from 'ora'
 import { initH5 } from './init-h5.js'
 import { initNuxtJSPC } from './init-nuxtjs-pc.js'
 import { initKoa } from './init-koa.js'
+import { initVueElementAdmin } from './init-element-admin.js'
 
 const program = commander.program
 
@@ -31,7 +32,7 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['Vue H5', 'NuxtJS PC', 'Koa'],
+    choices: ['Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa'],
   },
 ]
 
@@ -60,6 +61,8 @@ program
         initNuxtJSPC({ projectName })
       } else if (answers.type === 'Koa') {
         initKoa({ projectName })
+      } else if (answers.type === 'Vue Element Admin') {
+        initVueElementAdmin({ projectName })
       }
     })
   })
