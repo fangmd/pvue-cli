@@ -10,7 +10,7 @@ import { initH5 } from './init-h5.js'
 import { initNuxtJSPC } from './init-nuxtjs-pc.js'
 import { initKoa } from './init-koa.js'
 import { initVueElementAdmin } from './init-element-admin.js'
-import initReact from './init-react.js'
+import { initReact } from './init-react.js'
 
 const program = commander.program
 
