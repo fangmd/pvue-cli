@@ -11,6 +11,8 @@ import { initNuxtJSPC } from './init-nuxtjs-pc.js'
 import { initKoa } from './init-koa.js'
 import { initVueElementAdmin } from './init-element-admin.js'
 import { initReact } from './init-react.js'
+import { initReactAdmin } from './init-react-admin.js'
+
 
 const program = commander.program
 
@@ -33,7 +35,7 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['react', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa'],
+    choices: ['react', 'react-admin', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa'],
   },
 ]
 
@@ -66,6 +68,8 @@ program
         initVueElementAdmin({ projectName })
       } else if (answers.type === 'react') {
         initReact({ projectName })
+      }else if(answers.type === 'react-admin'){
+        initReactAdmin({ projectName })
       }
     })
   })
