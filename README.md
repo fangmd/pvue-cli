@@ -5,7 +5,7 @@
 用于快速创建 Vue 项目
 
 1. [React](https://github.com/fangmd/react-ts-template)
-2. [ReactAdmin](git@github.com:fangmd/react-admin-template.git)
+2. [ReactAdmin](https://github.com/fangmd/react-admin-template)
 3. [Vue H5](https://github.com/fangmd/pvue)
 4. [Vue NuxtJS PC](https://github.com/fangmd/pnuxt-pc)
 5. [koa](https://github.com/fangmd/pkoa)
