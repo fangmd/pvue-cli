@@ -26,6 +26,7 @@ export async function initNuxtJSPC({ projectName }) {
   )
   jsonData = JSON.parse(jsonData)
   jsonData['name'] = projectName
+  jsonData['version'] = "1.0.0"
   let obj = JSON.stringify(jsonData, null, '\t')
   let sss = fs.writeFileSync(
     `${pwd}/${projectName}/package.json`,

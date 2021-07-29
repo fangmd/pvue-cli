@@ -25,6 +25,7 @@ export async function initReact({ projectName }) {
   })
   jsonData = JSON.parse(jsonData)
   jsonData['name'] = projectName
+  jsonData['version'] = "1.0.0"
   let obj = JSON.stringify(jsonData, null, '\t')
   let sss = fs.writeFileSync(`${pwd}/${projectName}/package.json`, obj, function (err, data) {
     console.log(err, data)

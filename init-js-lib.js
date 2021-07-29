@@ -6,11 +6,11 @@ import chalk from 'chalk'
 import ora from 'ora'
 import fs from 'fs'
 
-export async function initReactAdmin({ projectName }) {
-  console.log(`init react admin: ${Conf.ReactAdmin}`)
+export async function initJSLib({ projectName }) {
+  console.log(`init js lib: ${Conf.js_lib}`)
 
   // 下载项目模版
-  await clone(`direct:${Conf.ReactAdmin}#master`, projectName, {
+  await clone(`direct:${Conf.js_lib}#master`, projectName, {
     clone: true,
   })
   const pwd = shell.pwd()

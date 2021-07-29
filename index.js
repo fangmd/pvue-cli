@@ -12,7 +12,8 @@ import { initKoa } from './init-koa.js'
 import { initVueElementAdmin } from './init-element-admin.js'
 import { initReact } from './init-react.js'
 import { initReactAdmin } from './init-react-admin.js'
-
+import { initJSLib } from './init-js-lib.js'
+import chalk from 'chalk'
 
 const program = commander.program
 
@@ -35,13 +36,21 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['react', 'react-admin', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa'],
+    choices: ['react', 'react-admin', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa', 'js-lib'],
   },
 ]
 
 program
+  .command('version')
+  .description('show version')
+  .action((option) => {
+    const json = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url), 'utf8'))
+    console.log(logSymbols.info, chalk.blue(`${json.version}`))
+  })
+
+program
   .command('init')
-  .description('创建项目')
+  .description('create project')
   .action((option) => {
     inquirer.prompt(questions).then((answers) => {
       const { projectName, type } = answers
@@ -68,8 +77,10 @@ program
         initVueElementAdmin({ projectName })
       } else if (answers.type === 'react') {
         initReact({ projectName })
-      }else if(answers.type === 'react-admin'){
+      } else if (answers.type === 'react-admin') {
         initReactAdmin({ projectName })
+      } else if (answers.type === 'js-lib') {
+        initJSLib({ projectName })
       }
     })
   })
