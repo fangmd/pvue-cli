@@ -13,6 +13,7 @@ import { initVueElementAdmin } from './init-element-admin.js'
 import { initReact } from './init-react.js'
 import { initReactAdmin } from './init-react-admin.js'
 import { initJSLib } from './init-js-lib.js'
+import { initExpress } from './init-express.js'
 import chalk from 'chalk'
 
 const program = commander.program
@@ -36,7 +37,7 @@ const questions = [
     type: 'list',
     name: 'type',
     message: '选择项目类型',
-    choices: ['react', 'react-admin', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa', 'js-lib'],
+    choices: ['react', 'react-admin', 'Vue H5', 'Vue Element Admin', 'NuxtJS PC', 'Koa', 'Express', 'js-lib'],
   },
 ]
 
@@ -79,6 +80,8 @@ program
         initReact({ projectName })
       } else if (answers.type === 'react-admin') {
         initReactAdmin({ projectName })
+      } else if (answers.type === 'Express') {
+        initExpress({ projectName })
       } else if (answers.type === 'js-lib') {
         initJSLib({ projectName })
       }

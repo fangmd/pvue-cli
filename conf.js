@@ -5,5 +5,6 @@ export default {
   VUE_ELEMENT_ADMIN: 'git@github.com:fangmd/vue-element-admin.git',
   NUXT_PC: 'git@github.com:fangmd/pnuxt-pc.git',
   KOA: 'git@github.com:fangmd/pkoa.git',
+  Express: 'git@github.com:fangmd/express-template.git',
   js_lib: 'git@github.com:fangmd/js-lib-template.git',
 }
