@@ -33,7 +33,7 @@ export async function initReactAdmin({ projectName }) {
 
   // 自动安装依赖
   const installSpinner = ora('正在安装依赖...').start()
-  if (shell.exec(`cd ${projectName} && yarn`).code !== 0) {
+  if (shell.exec(`cd ${projectName} && pnpm`).code !== 0) {
     console.log(logSymbols.warning, chalk.yellow('自动安装失败，请手动安装！'))
     installSpinner.fail()
     shell.exit(1)
